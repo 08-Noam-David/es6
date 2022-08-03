@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6</title>
+    <script src="resources/script.js"></script>
+</head>
+<body>
+    <ol>
+        <li>
+            <button onclick="reverseString()">Reverse string</button>
+        </li>
+        <li>
+            <button onclick="console.log(omitBy({ a: 1, b: 'a', c: '2', d: 'b' }, x => typeof x == 'number'))">Omit by</button>
+        </li>
+        <li>
+            <button onclick="console.log(combine(test1, test2))">Combine objects</button>
+        </li>
+        <li>
+            <ul>
+                <li>
+                   <button onclick="console.log(minN([3, 2, 1]))">Smallest number</button> 
+                </li>
+                <li>
+                    <button onclick="console.log(minN([3, 2, 1]), 2)">Two smallest number</button> 
+                 </li>
+            </ul>
+        </li>
+        <li>
+            <ul>
+                <li>
+                    <button onclick="console.log(reduce_Which([1, 2, 3]))">Min item</button>
+                </li>
+                <li>
+                    <button onclick="console.log(reduce_Which([30, 20, 10], (a, b) => b - a))">Min item (reverse)</button>
+                </li>
+                <li>
+                    <button onclick="console.log(reduce_Which(
+                        [
+                            { name: 'Kevin', age: 16 },
+                            { name: 'John', age: 20 },
+                            { name: 'Ani', age: 19 }
+                        ], (a, b) => a.age -  b.age))">
+                        Min item (objects)
+                    </button>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <ul>
+                <li>
+                    <button onclick="console.log(doIt([4, 2, 3], x => x > 1))">All (1)</button>
+                </li>
+                <li>
+                    <button onclick="console.log(doIt([4, 2, 3], x => x < 1))">All (2)</button>
+                </li>
+                <li>
+                    <button onclick="console.log(doIt([1, 2, 3]))">All (3)</button>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <button onclick="console.log(filter_Non_UniqueBy(
+                [
+                    { id: 0, value: 'a' },
+                    { id: 1, value: 'b' },
+                    { id: 2, value: 'c' },
+                    { id: 1, value: 'd' },
+                    { id: 0, value: 'e' }
+                ], (a, b) => a.id == b.id))">
+                Filter non unique by
+            </button>
+        </li>
+        <li>
+            <ul>
+                <li>
+                    <button onclick="console.log(random_intArray_In_Range(1, 20, 10))">Random 10 (1 - 20)</button>
+                </li>
+                <li>
+                    <button onclick="console.log(random_intArray_In_Range(-10, 10, 5))">Random 5 (-10 - 10)</button>
+                </li>
+            </ul>
+        </li>
+    </ol>
+</body>
+</html>
